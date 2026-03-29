@@ -19,21 +19,24 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.reptran.com"), // ✅ FIXED
+  // ✅ PRIMARY DOMAIN (non-www)
+  metadataBase: new URL("https://reptran.com"),
 
   title: "RepTran — Realignment, Not Restart",
   description:
     "The system built for the moment after you fall off — and what you do next.",
 
+  // ✅ Canonical
   alternates: {
-    canonical: "/", // ✅ ensures canonical = www
+    canonical: "/",
   },
 
+  // ✅ Open Graph (for WhatsApp, LinkedIn, etc.)
   openGraph: {
     title: "RepTran — Realignment, Not Restart",
     description:
       "The system built for the moment after you fall off — and what you do next.",
-    url: "https://www.reptran.com", // ✅ FIXED
+    url: "https://reptran.com",
     siteName: "RepTran",
     type: "website",
     images: [
@@ -46,6 +49,7 @@ export const metadata: Metadata = {
     ],
   },
 
+  // ✅ Twitter
   twitter: {
     card: "summary_large_image",
     title: "RepTran — Realignment, Not Restart",
@@ -54,13 +58,15 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
 
+  // ✅ Icons
   icons: {
     icon: [{ url: "/icon.png", sizes: "32x32", type: "image/png" }],
     apple: "/apple-icon.png",
   },
 
+  // ✅ Google Search Console verification
   verification: {
-    google: "u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II", // ✅ CLEAN WAY (instead of manual meta)
+    google: "u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II",
   },
 };
 
@@ -76,7 +82,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Structured Data */}
+        {/* ✅ Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -84,7 +90,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "RepTran",
-              url: "https://www.reptran.com", // ✅ FIXED
+              url: "https://reptran.com", // ✅ non-www
               description:
                 "Build lasting habits through streaks, feedback loops, and testable micro-tasks.",
             }),
