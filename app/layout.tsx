@@ -19,19 +19,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.reptran.com"), // ✅ FIXED
+
   title: "RepTran — Realignment, Not Restart",
   description:
     "The system built for the moment after you fall off — and what you do next.",
+
+  alternates: {
+    canonical: "/", // ✅ ensures canonical = www
+  },
 
   openGraph: {
     title: "RepTran — Realignment, Not Restart",
     description:
       "The system built for the moment after you fall off — and what you do next.",
-    url: "https://reptran.com",
+    url: "https://www.reptran.com", // ✅ FIXED
     siteName: "RepTran",
     type: "website",
-
-    // 👇 ADD THIS
     images: [
       {
         url: "/og-image.png",
@@ -47,12 +51,17 @@ export const metadata: Metadata = {
     title: "RepTran — Realignment, Not Restart",
     description:
       "The system built for the moment after you fall off — and what you do next.",
-
-    // 👇 ADD THIS (important for Twitter/X)
     images: ["/og-image.png"],
   },
 
-  metadataBase: new URL("https://reptran.com"),
+  icons: {
+    icon: [{ url: "/icon.png", sizes: "32x32", type: "image/png" }],
+    apple: "/apple-icon.png",
+  },
+
+  verification: {
+    google: "u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II", // ✅ CLEAN WAY (instead of manual meta)
+  },
 };
 
 export default function RootLayout({
@@ -67,10 +76,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <meta
-          name="google-site-verification"
-          content="u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II"
-        />
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -79,7 +84,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "RepTran",
-              url: "https://reptran.com",
+              url: "https://www.reptran.com", // ✅ FIXED
               description:
                 "Build lasting habits through streaks, feedback loops, and testable micro-tasks.",
             }),
