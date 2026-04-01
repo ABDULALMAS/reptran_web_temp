@@ -420,7 +420,7 @@ export default function Home() {
         <div className="fw">
           <div className="flogo">Rep<em>Tran</em></div>
           <div className="flinks">
-            <a href="#">Privacy</a>
+            <a href="/privacy-policy">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Contact</a>
           </div>
