@@ -60,7 +60,7 @@ If you are unable to access your account, contact us at: support@reptran.com`}
             title="Need help?"
             text={`If you face any issues while deleting your account, reach out to us.
 
-Email: your@email.com`}
+Email: support@reptran.com`}
           />
 
         </div>
