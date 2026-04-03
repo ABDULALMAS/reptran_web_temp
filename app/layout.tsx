@@ -59,14 +59,13 @@ export const metadata: Metadata = {
   },
 
   // ✅ Icons
-icons: {
-  icon: [
-    { url: "/icon.png", type: "image/png" },
-  ],
-  apple: [
-    { url: "/apple-icon.png" },
-  ],
-},
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png" }],
+  },
   // ✅ Google Search Console verification
   verification: {
     google: "u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II",
