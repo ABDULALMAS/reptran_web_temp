@@ -61,8 +61,8 @@ export const metadata: Metadata = {
   // ✅ Icons
   icons: {
     icon: [
+      { url: "/icon.png", type: "image/png" }, // put first
       { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/icon.png", type: "image/png" },
     ],
     apple: [{ url: "/apple-icon.png" }],
   },
@@ -84,6 +84,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="icon" href="/icon.png" sizes="192x192" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         {/* ✅ Structured Data */}
         <script
           type="application/ld+json"
