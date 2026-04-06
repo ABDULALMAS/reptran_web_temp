@@ -59,13 +59,13 @@ export const metadata: Metadata = {
   },
 
   // ✅ Icons
-  icons: {
-    icon: [
-      { url: "/icon.png", type: "image/png" }, // put first
-      { url: "/favicon.ico", type: "image/x-icon" },
-    ],
-    apple: [{ url: "/apple-icon.png" }],
-  },
+ icons: {
+  icon: [
+    { url: "/icon.png", sizes: "192x192", type: "image/png" }, // PRIMARY
+    { url: "/favicon.ico", type: "image/x-icon" }, // fallback
+  ],
+  apple: [{ url: "/apple-icon.png" }],
+},
   // ✅ Google Search Console verification
   verification: {
     google: "u2ZlDTGoBa62OOxYxZeRlcfiW0OGkP-IvPZ-bl0u3II",
