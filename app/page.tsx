@@ -183,7 +183,6 @@ export default function Home() {
 
     obs.observe(phoneEl)
 
-    // Fallback if already in view on mount
     requestAnimationFrame(() => {
       const rect = phoneEl.getBoundingClientRect()
       if (rect.top < window.innerHeight) startChat()
@@ -204,6 +203,11 @@ export default function Home() {
           <div className="nav-links">
             <a href="#system">The System</a>
             <a href="#voices">Stories</a>
+            <a href="https://play.google.com/store/apps/details?id=com.reptran.app" target="_blank" rel="noopener noreferrer" className="nav-play-link">
+              {/* Google Play icon */}
+             <img src="/google-play-icon.svg" alt="" className="play-logo" aria-hidden="true" />
+              Google Play
+            </a>
             <a href="#begin" className="nav-cta">Begin Realignment</a>
           </div>
         </div>
@@ -217,7 +221,7 @@ export default function Home() {
         <div className="hero-ring2" />
         <div className="hero-bigr">R</div>
         <div className="hw">
-          <p className="hero-label">A realignment system</p>
+          {/* <p className="hero-label">A realignment system</p> */}
           <h1 className="hero-h1">
             You didn&apos;t<br />
             <span className="struck">fail</span> the workout.<br />
@@ -231,6 +235,19 @@ export default function Home() {
             </p>
             <div className="hero-acts">
               <a href="#begin" className="btn-main">Start Realignment →</a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.reptran.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-play"
+                aria-label="Get it on Google Play"
+              >
+                <img src="/google-play-icon.svg" alt="" className="play-logo" aria-hidden="true" />
+                <span className="play-text">
+                  <span className="play-label">Get it on</span>
+                  <span className="play-store">Google Play</span>
+                </span>
+              </a>
               <span className="hero-scroll">Scroll to discover</span>
             </div>
           </div>
@@ -410,7 +427,21 @@ export default function Home() {
           <p className="cta-sub">Join 2,400+ people who stopped quitting on themselves.<br />Free to start. No credit card. No streak pressure.</p>
           <div className="cta-btns">
             <a href="#" className="btn-cta">Start Your First Realignment</a>
-            <p className="cta-fine">Free · No streaks · No shame</p>
+            {/* Google Play Badge */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.reptran.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-play btn-play-cta"
+              aria-label="Get it on Google Play"
+            >
+              <img src="/google-play-icon.svg" alt="" className="play-logo" aria-hidden="true" />
+              <span className="play-text">
+                <span className="play-label">Get it on</span>
+                <span className="play-store">Google Play</span>
+              </span>
+            </a>
+            <p className="cta-fine">Free · No streaks · No shame · Android</p>
           </div>
         </div>
       </section>
@@ -423,6 +454,9 @@ export default function Home() {
             <a href="/privacy-policy">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Contact</a>
+            <a href="https://play.google.com/store/apps/details?id=com.reptran.app" target="_blank" rel="noopener noreferrer" className="flink-play">
+  <img src="/google-play-icon.svg" alt="" className="play-logo" aria-hidden="true" />              Google Play
+            </a>
           </div>
         </div>
         <div className="fw"><p className="fcopy">© 2025 RepTran · Built for the ones who keep coming back</p></div>
